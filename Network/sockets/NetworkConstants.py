@@ -1,5 +1,5 @@
 # Флаг использования Localhost вместо реальных IP
-isLocal = False 
+isLocal = True 
 
 CONTROLLER_ADDRESS_PORT = None
 VEHICLE_ADDRESS_PORT = None
