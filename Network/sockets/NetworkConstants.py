@@ -1,0 +1,22 @@
+# Флаг использования Localhost вместо реальных IP
+isLocal = False 
+
+CONTROLLER_ADDRESS_PORT = None
+VEHICLE_ADDRESS_PORT = None
+
+
+# Задание адресов
+if isLocal:
+    CONTROLLER_ADDRESS_PORT = ("127.0.0.1", 20001)
+    VEHICLE_ADDRESS_PORT = ("127.0.0.1", 20002)
+    SERVER_ADDRES_PORT = ("127.0.0.1", 20003)
+    CAMERA_RTSP_ADDRES = 0
+
+else:
+    CONTROLLER_ADDRESS_PORT = ("192.168.88.253", 20005)
+    VEHICLE_ADDRESS_PORT = ("192.168.88.250", 20002)
+    SERVER_ADDRES_PORT = ("192.168.88.251", 20004)
+    # CONTROLLER_ADDRESS_PORT = ("192.168.176.126", 20005)
+    # VEHICLE_ADDRESS_PORT = ("192.168.176.149", 20002)
+    # SERVER_ADDRES_PORT = ("192.168.176.149", 20004)
+    CAMERA_RTSP_ADDRES = "rtsp://test:tushenka123.@192.168.88.64/h265+/ch1/main:network-caching=250"
